@@ -33,6 +33,24 @@
         .logo span {
             color: #3498db;
         }
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            padding: 10px;
+            background: none;
+            border: none;
+            color: white;
+            margin-left: auto;
+            margin-right: 1rem;
+        }
+        .hamburger .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: white;
+            transition: all 0.3s ease-in-out;
+        }
         nav ul {
             list-style-type: none;
             padding: 0;
@@ -162,77 +180,6 @@
             color: #e67e22;
             margin-top: 15px;
         }
-    </style>
-</head>
-<body>
-    <header>
-        <a href="index.php" class="logo">Carpet<span>Expert</span></a>
-        <nav>
-            <ul>
-                <li><a href="index.php#home">Home</a></li>
-                <li><a href="index.php#about">About</a></li>
-                <li><a href="index.php#recent-posts">Recent Posts</a></li>
-                <li><a href="index.php#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="story-container">
-        <h1>The Devil Dog's New Challenge</h1>
-        <img src="loki.png" alt="Loki, the carpet artist">
-        <p class="teaser">You won't believe what happened when this mischievous pup met his match!</p>
-        <div class="story-content">
-            <p>Loki lived up to his namesake as the neighborhood's most notorious carpet artist. His specialty? Creating perfect devil horn patterns across every inch of his owner Jenny's carpets. With 35 pounds of pure mischief packed into his border collie frame, he had turned carpet-messing into an art form that no ordinary vacuum could defeat.</p>
-            <p>That was until Jenny brought home the Eureka NEU350, and Loki's reign of carpet chaos met its match.</p>
-            <p>On that first morning, Loki watched suspiciously as Jenny unboxed her new weapon in their ongoing battle of cleanliness versus chaos. The vacuum's sleek black and yellow design, weighing just 10.4 pounds, seemed to mock his previous victories. At $89.95, it was Jenny's latest investment in maintaining home order.</p>
-            <p>Loki had just finished his masterpiece – an intricate series of devil horns across the living room carpet – when Jenny fired up the NEU350. The first thing he noticed was how easily she maneuvered it under his favorite hiding spot beneath the coffee table, thanks to its swivel steering. His usual safe haven was no longer so safe.</p>
-            <p>The LED headlights illuminated his artwork in betraying detail, revealing even the smallest patterns he'd worked so hard to create. The 12.2-inch cleaning path meant Jenny could erase his designs faster than ever before. The 25-foot cord length let her reach every corner of his gallery without switching outlets.</p>
-            <p>Loki watched in dismay as the dual cyclone technology made quick work of his carefully crafted mess. The 13 kpa suction power lifted every bit of fur and debris he'd so artistically arranged. Through the transparent brushroll window, he could actually see his masterpiece disappearing into the 1.5L dust cup.</p>
-            <p>When Jenny switched from carpet to hardwood floors with a simple adjustment, Loki realized his domain had truly been conquered. Even his backup plan of spreading fur everywhere was thwarted by the included pet turbo brush and crevice tool.</p>
-            <p>That evening, as Jenny finished cleaning with a triumphant smile, Loki lay on his bed, contemplating his next move. Perhaps it was time to take his artistic talents to the backyard garden instead. After all, mud patterns were much harder to vacuum.</p>
-            <p>As he dozed off, he couldn't help but respect this worthy opponent. The Eureka NEU350 had won this battle, but tomorrow was another day, and this devil dog still had a few tricks up his sleeve.</p>
-        </div>
-        <div class="offer-section">
-            <div class="discount-banner">🎉 SPECIAL OFFER: 10% OFF! 🎉</div>
-            <p class="price"><span class="original-price">$99.99</span> Now only $89.96!</p>
-            <p class="savings">You save: $16.61</p>
-            <a href="https://amzn.to/40OtIxH" class="cta-button">Get your Eureka Pro NEU350 with Pet Tool and win your daily battle too!</a>
-            <p class="reviews">⭐⭐⭐⭐ 4.3/5 stars from over 58,000 happy customers!</p>
-            <p class="urgency">🚨 Limited Time Offer! Price may change soon. Act now! 🚨</p>
-        </div>
-        <div class="testimonials">
-            <h2>Happy Customer Stories</h2>
-            <div class="testimonial">
-                <img src="https://source.unsplash.com/random/100x100?face,woman" alt="Sarah T." class="testimonial-image">
-                <div class="testimonial-content">
-                    <p>"The Eureka NEU350 saved my sanity! With three dogs and two cats, I was constantly battling pet hair. This vacuum makes it so easy to keep my home clean. It's a game-changer!" - Sarah T.</p>
-                </div>
-            </div>
-            <div class="testimonial">
-                <img src="https://source.unsplash.com/random/100x100?face,man" alt="Mike R." class="testimonial-image">
-                <div class="testimonial-content">
-                    <p>"I was skeptical at first, but this vacuum is amazing! It picked up so much dirt and hair that my old vacuum missed. My carpets look brand new!" - Mike R.</p>
-                </div>
-            </div>
-            <div class="testimonial">
-                <img src="https://source.unsplash.com/random/100x100?face,woman,young" alt="Emily G." class="testimonial-image">
-                <div class="testimonial-content">
-                    <p>"As a professional pet sitter, I deal with a lot of pet messes. The Eureka NEU350 has become my secret weapon. It's powerful, easy to use, and makes my job so much easier!" - Emily G.</p>
-                </div>
-            </div>
-        </div>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2025 CarpetExpert.online. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
-        <p class="disclaimer">Disclaimer: This site may contain affiliate links. We may earn a commission if you make a purchase through these links, at no extra cost to you.</p>
-    </footer>
-    <style>
         .testimonials {
             margin-top: 30px;
             background-color: #f0f8ff;
@@ -267,16 +214,38 @@
             margin: 0;
         }
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: center;
+            .hamburger {
+                display: block;
+                border: 2px solid white;
+                border-radius: 5px;
+                padding: 8px 12px;
             }
             nav ul {
+                position: fixed;
+                left: -100%;
+                top: 70px;
                 flex-direction: column;
-                align-items: center;
+                background-color: #2c3e50;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 20px 0;
+            }
+            nav ul.active {
+                left: 0;
             }
             nav ul li {
-                margin-bottom: 0.5rem;
+                margin: 15px 0;
+            }
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
             }
             .story-container {
                 padding: 15px;
@@ -311,6 +280,95 @@
             margin-top: 1rem;
         }
     </style>
+</head>
+<body>
+    <header>
+        <a href="index.php" class="logo">Carpet<span>Expert</span></a>
+        <nav>
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul>
+                <li><a href="index.php#home">Home</a></li>
+                <li><a href="index.php#about">About</a></li>
+                <li><a href="index.php#recent-posts">Recent Posts</a></li>
+                <li><a href="index.php#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="story-container">
+            <h1>The Devil Dog's New Challenge</h1>
+            <img src="loki.png" alt="Loki, the carpet artist">
+            <p class="teaser">You won't believe what happened when this mischievous pup met his match!</p>
+            <div class="story-content">
+                <p>Loki lived up to his namesake as the neighborhood's most notorious carpet artist. His specialty? Creating perfect devil horn patterns across every inch of his owner Jenny's carpets. With 35 pounds of pure mischief packed into his border collie frame, he had turned carpet-messing into an art form that no ordinary vacuum could defeat.</p>
+                <p>That was until Jenny brought home the Eureka NEU350, and Loki's reign of carpet chaos met its match.</p>
+                <p>On that first morning, Loki watched suspiciously as Jenny unboxed her new weapon in their ongoing battle of cleanliness versus chaos. The vacuum's sleek black and yellow design, weighing just 10.4 pounds, seemed to mock his previous victories. At $89.95, it was Jenny's latest investment in maintaining home order.</p>
+                <p>Loki had just finished his masterpiece – an intricate series of devil horns across the living room carpet – when Jenny fired up the NEU350. The first thing he noticed was how easily she maneuvered it under his favorite hiding spot beneath the coffee table, thanks to its swivel steering. His usual safe haven was no longer so safe.</p>
+                <p>The LED headlights illuminated his artwork in betraying detail, revealing even the smallest patterns he'd worked so hard to create. The 12.2-inch cleaning path meant Jenny could erase his designs faster than ever before. The 25-foot cord length let her reach every corner of his gallery without switching outlets.</p>
+                <p>Loki watched in dismay as the dual cyclone technology made quick work of his carefully crafted mess. The 13 kpa suction power lifted every bit of fur and debris he'd so artistically arranged. Through the transparent brushroll window, he could actually see his masterpiece disappearing into the 1.5L dust cup.</p>
+                <p>When Jenny switched from carpet to hardwood floors with a simple adjustment, Loki realized his domain had truly been conquered. Even his backup plan of spreading fur everywhere was thwarted by the included pet turbo brush and crevice tool.</p>
+                <p>That evening, as Jenny finished cleaning with a triumphant smile, Loki lay on his bed, contemplating his next move. Perhaps it was time to take his artistic talents to the backyard garden instead. After all, mud patterns were much harder to vacuum.</p>
+                <p>As he dozed off, he couldn't help but respect this worthy opponent. The Eureka NEU350 had won this battle, but tomorrow was another day, and this devil dog still had a few tricks up his sleeve.</p>
+            </div>
+            <div class="offer-section">
+                <div class="discount-banner">🎉 SPECIAL OFFER: 10% OFF! 🎉</div>
+                <p class="price"><span class="original-price">$99.99</span> Now only $89.96!</p>
+                <p class="savings">You save: $16.61</p>
+                <a href="https://amzn.to/40OtIxH" class="cta-button">Get your Eureka Pro NEU350 with Pet Tool and win your daily battle too!</a>
+                <p class="reviews">⭐⭐⭐⭐ 4.3/5 stars from over 58,000 happy customers!</p>
+                <p class="urgency">🚨 Limited Time Offer! Price may change soon. Act now! 🚨</p>
+            </div>
+            <div class="testimonials">
+                <h2>Happy Customer Stories</h2>
+                <div class="testimonial">
+                    <img src="https://source.unsplash.com/random/100x100?face,woman" alt="Sarah T." class="testimonial-image">
+                    <div class="testimonial-content">
+                        <p>"The Eureka NEU350 saved my sanity! With three dogs and two cats, I was constantly battling pet hair. This vacuum makes it so easy to keep my home clean. It's a game-changer!" - Sarah T.</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img src="https://source.unsplash.com/random/100x100?face,man" alt="Mike R." class="testimonial-image">
+                    <div class="testimonial-content">
+                        <p>"I was skeptical at first, but this vacuum is amazing! It picked up so much dirt and hair that my old vacuum missed. My carpets look brand new!" - Mike R.</p>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <img src="https://source.unsplash.com/random/100x100?face,woman,young" alt="Emily G." class="testimonial-image">
+                    <div class="testimonial-content">
+                        <p>"As a professional pet sitter, I deal with a lot of pet messes. The Eureka NEU350 has become my secret weapon. It's powerful, easy to use, and makes my job so much easier!" - Emily G.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 CarpetExpert.online. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p class="disclaimer">Disclaimer: This site may contain affiliate links. We may earn a commission if you make a purchase through these links, at no extra cost to you.</p>
+    </footer>
     <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+    <script>
+        // Hamburger menu functionality
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector("nav ul");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll("nav ul li a").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+    </script>
 </body>
 </html>

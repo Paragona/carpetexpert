@@ -35,6 +35,24 @@
         .logo span {
             color: #3498db;
         }
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            padding: 10px;
+            background: none;
+            border: none;
+            color: white;
+            margin-left: auto;
+            margin-right: 1rem;
+        }
+        .hamburger .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: white;
+            transition: all 0.3s ease-in-out;
+        }
         nav ul {
             list-style-type: none;
             padding: 0;
@@ -210,12 +228,38 @@
             background-color: #2980b9;
         }
         @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                border: 2px solid white;
+                border-radius: 5px;
+                padding: 8px 12px;
+            }
             nav ul {
+                position: fixed;
+                left: -100%;
+                top: 70px;
                 flex-direction: column;
-                align-items: center;
+                background-color: #2c3e50;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 20px 0;
+            }
+            nav ul.active {
+                left: 0;
             }
             nav ul li {
-                margin-bottom: 0.5rem;
+                margin: 15px 0;
+            }
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
             }
             .featured-story-box h2 {
                 font-size: 2rem;
@@ -233,6 +277,11 @@
     <header>
         <a href="index.php" class="logo">Carpet<span>Expert</span></a>
         <nav>
+            <button class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -295,7 +344,7 @@
             <button type="submit">Send Message</button>
         </form>
         <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
             $name = $_POST['name'];
             $email = $_POST['email'];
             $message = $_POST['message'];
@@ -319,6 +368,20 @@
 
     <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
     <script>
+        // Hamburger menu functionality
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector("nav ul");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll("nav ul li a").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
