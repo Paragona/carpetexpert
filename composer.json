@@ -1,0 +1,8 @@
+{
+  "name": "paragona/carpetexpert",
+  "description": "Carpet cleaning expert website",
+  "type": "project",
+  "require": {
+    "php": ">=7.4"
+  }
+}
